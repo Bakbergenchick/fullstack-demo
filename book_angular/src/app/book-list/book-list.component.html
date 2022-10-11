@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">
+    <h2 class="text-center my-2">List of Books</h2>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.bookName }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.price }}</td>
+          <td class="d-flex justify-content-around">
+            <button (click)="editBook(book.id)" class="btn btn-warning">EDIT</button>
+            <button (click)="deleteBook(book.id)" class="btn btn-danger">DELETE</button>
+            <button (click)="detailsOfBook(book.id)" class="btn btn-success">MORE INFO</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

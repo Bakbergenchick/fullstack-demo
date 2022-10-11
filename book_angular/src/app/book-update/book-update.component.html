@@ -1,0 +1,15 @@
+<form  (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="bookName" class="form-label">Name: </label>
+    <input type="text" class="form-control" id="bookName" name="bookName" [(ngModel)]="book.bookName">
+  </div>
+  <div class="mb-3">
+    <label for="bookAuthor" class="form-label">Author: </label>
+    <input type="text" class="form-control" id="bookAuthor" name="author" [(ngModel)]="book.author">
+  </div>
+  <div class="mb-3">
+    <label for="bookPrice" class="form-label">Price: </label>
+    <input type="number" class="form-control" id="bookPrice" name="price" [(ngModel)]="book.price">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
